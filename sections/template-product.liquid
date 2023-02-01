@@ -1,0 +1,477 @@
+<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<style>
+    /* For mobile */
+    p,
+    span,
+    div {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+
+    }
+
+    .title {
+        font-size: 28px;
+        font-family: 'Montserrat', sans-serif;
+
+        font-weight: 600;
+    }
+
+    .availability {
+
+        font-size: 15px;
+
+    }
+
+    .quality-icons {
+        margin-top: 50px;
+        margin-left: 40px;
+        color: #545454;
+    }
+
+
+    .swiper-slide {
+        max-width: 480px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+
+
+    }
+
+
+    .product--information {
+        border: 1px solid rgba(158, 158, 158, 0.23);
+        box-shadow: 1px 1px 7px 3px rgba(181, 181, 181, 0.61);
+        width: 94%;
+        margin-left: 3%;
+        display: block;
+        padding: 10px;
+    }
+
+    .offer_price {
+        color: #0623ff;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .original_price {
+        font-weight: bold;
+        font-size: 18px;
+        color: black;
+    }
+
+    .product-data {
+        padding-left: 10px;
+        padding-top: 15px;
+
+    }
+
+
+    .myButton {
+        background-color: #1f48ff;
+        border-radius: 4px;
+        width: 94%;
+        display: block;
+
+        margin-bottom: 20px;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 17px;
+        padding: 1em 3em;
+        margin-bottom: 34px;
+        font-weight: 600;
+
+    }
+
+    .gallery-thumbs {
+
+        display: none;
+
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: black;
+
+        height: 15px !important;
+
+
+    }
+
+    .swiper-pagination {
+        color: #545454;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        font-size: 32px;
+
+
+
+    }
+
+    .inklMwSt {
+        font-size: 14px;
+    }
+
+
+
+    @media only screen and (min-width: 768px) {
+
+
+        /* For desktop */
+
+        .product-information-wrapper {
+            margin: 0 auto;
+            display: block;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .product--information {
+            border: 1px solid rgba(158, 158, 158, 0.23);
+            box-shadow: 1px 1px 7px 3px rgba(181, 181, 181, 0.61);
+            width: 475px;
+            height: 290px;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            margin-left: 0px;
+            margin-top: 18%;
+
+        }
+
+        .product_description {
+            font-size: 18px;
+            margin-bottom: 0 !important;
+            margin-top: 0 !important;
+        }
+
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: black;
+            top: auto !important;
+            height: 15px !important;
+
+
+        }
+
+        .swiper-button-prev:after,
+        .swiper-button-next:after {
+            font-size: 22px;
+
+
+        }
+
+
+        .gallery-thumbs {
+            display: block;
+            width: 98% !important;
+            padding: 0;
+            overflow: hidden;
+            margin-top: 45px;
+        }
+
+
+        .thumb {
+            margin-left: 5px;
+            opacity: 0.8;
+
+        }
+
+        .swiper-slide {
+            max-width: 480px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+
+
+        }
+
+        .swiper_with_gallery {
+            width: 480px;
+        }
+
+        .arrows {
+            margin-top: 35px;
+
+        }
+
+
+
+        .product-data {
+            padding-left: 18px;
+            padding-top: 3px;
+        }
+
+        .quality-icons {
+            margin-top: 50px;
+            margin-left: 0px;
+
+        }
+
+        .quality-icon {
+            display: inline-flex;
+            color: #545454;
+        }
+
+        .myButton {
+            background-color: #1f48ff;
+            text-align: center;
+            border-radius: 3px;
+            width: 424px;
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            padding-left: 6rem;
+            padding-right: 6rem;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            margin-bottom: 34px;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #545454;
+        }
+
+        .my-3 {
+            margin-bottom: 0 !important;
+            margin-top: 10px !important;
+        }
+
+        p,
+        span,
+        div {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+
+        }
+
+        .title {
+            font-size: 25px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        .availability {
+            font-weight: 500;
+            font-size: 16px;
+
+
+        }
+
+        .swiper-pagination {
+            display: none;
+        }
+
+        .quality-icons {
+            margin-left: 17px;
+        }
+
+
+    }
+</style>
+<div class="max-w-6xl mx-auto my-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div class="product--medias">
+            <div class="md:block">
+                <div class="swiper h-94 swiper_with_gallery">
+                    <div class="swiper-wrapper">
+                        {% for media in product.media %}
+                        <div class="swiper-slide">
+
+                            {% render 'product-media', media: media %}
+
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="arrows">
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="swiper-container gallery-thumbs">
+                        <div class="swiper-wrapper">
+                            {% for media in product.media %}
+                            <div>
+                                <div class="thumb">
+                                    {% render 'product-media', media: media %}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="product--information-warpper">
+            <div class="product--information">
+                <div class="product-data">
+                    {% form 'product', product %}
+                    <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
+                    {% for block in section.blocks %}
+                    {% case block.type %}
+                    {% when 'title' %}
+                    <div class="my-3">
+                        <h1 class="title text-3xl">{{product.title}}</h1>
+                    </div>
+
+                    {% when 'description' %}
+                    <div class="my-3">
+                        <p class="product_description">{{product.description}}</p>
+                    </div>
+
+                    {% when 'price' %}
+                    <div class="my-3">
+                        {% assign product_price = product.selected_or_first_available_variant %}
+                        <span class="original_price text-base text-gray-500 line-through">{{
+                            product_price.compare_at_price | money
+                            }}</span>
+                        <span class="text-lg text-900 offer_price"> &nbsp; {{ product_price.price | money }}</span>
+                        <span class="inklMwSt"> inkl. MwSt.</span>
+                    </div>
+                    <div class="my-3">
+                        {% if product.selected_or_first_available_variant.available %}
+                        <span class="availability" style="color:#24a526"><span style="font-size: 34px;">●</span> Auf
+                            Lager, in 2-3 Tagen bei dir</span>
+                        {% endif %}
+                    </div>
+
+                    {% when 'checkout_buttons' %}
+                    <button type="submit" name="add" class="hover:bg-gray-700 myButton">In den Einkaufswagen</button>
+
+
+                    {% endcase %}
+                    {% endfor %}
+
+
+                </div>
+
+                {% endform %}
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <div class="row quality-icons">
+        <div class="col-sm quality-icon">
+            {% render 'check-icon' %}
+
+        </div>
+        <div class="col-sm quality-icon">
+            {% render 'check-icon' %}
+
+        </div>
+        <div class="col-sm quality-icon">
+            {% render 'check-icon' %}
+
+
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+<script>
+    const swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        pagination: {
+            el: '.swiper-pagination'
+        },
+
+
+        navigation: {
+            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next'
+        }
+
+
+    })
+
+
+
+
+    var thumbs = new Swiper('.gallery-thumbs', {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        centeredSlides: true,
+        loop: true,
+        slideToClickedSlide: true
+
+    });
+
+
+
+
+    slider.controller.control = thumbs;
+    thumbs.controller.control = slider;
+
+
+</script>
+
+{% schema %}
+{
+"name": "Product",
+"blocks": [
+{
+"type": "title",
+"name":"Title",
+"limit": 1
+
+},
+{
+"type": "price",
+"name":"Price",
+"limit": 1
+
+},
+{
+"type": "description",
+"name":"Description",
+"limit": 1
+
+},
+{
+"type": "checkout_buttons",
+"name":"Checkout Buttons",
+"limit": 1
+
+},
+{
+"type": "availability",
+"name":"Availability",
+"limit": 1
+
+}
+
+]
+
+}
+
+{% endschema %}
