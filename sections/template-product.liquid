@@ -123,6 +123,8 @@
 
 
 
+
+
     @media only screen and (min-width: 768px) {
 
 
@@ -144,8 +146,8 @@
             display: block;
             justify-content: center;
             align-items: center;
-            margin-left: 0px;
-            margin-top: 18%;
+            margin-left: 15px;
+            margin-top: 15%;
 
         }
 
@@ -176,15 +178,21 @@
         .gallery-thumbs {
             display: block;
             width: 98% !important;
+            height: 200px !;
             padding: 0;
             overflow: hidden;
-            margin-top: 45px;
+            /* margin-top: 45px; */
+            padding: 0 !important;
         }
 
 
         .thumb {
             margin-left: 5px;
+            margin-bottom: 3px;
             opacity: 0.8;
+            width: 100 !important;
+
+
 
         }
 
@@ -289,36 +297,45 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
         <div class="product--medias">
             <div class="md:block">
-                <div class="swiper h-94 swiper_with_gallery">
-                    <div class="swiper-wrapper">
-                        {% for media in product.media %}
-                        <div class="swiper-slide">
 
-                            {% render 'product-media', media: media %}
-
-                        </div>
-                        {% endfor %}
-                    </div>
-
-                    <div class="arrows">
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                    <div class="swiper-container gallery-thumbs">
-                        <div class="swiper-wrapper">
-                            {% for media in product.media %}
-                            <div>
-                                <div class="thumb">
-                                    {% render 'product-media', media: media %}
+                <div class="row">
+                    <div class="col-sm " style=" padding:0;">
+                        <div class="swiper-container ">
+                            <div class="swiper-wrapper gallery-thumbs">
+                                {% for media in product.media %}
+                                <div>
+                                    <div class="thumb">
+                                        {% render 'product-media', media: media %}
+                                    </div>
                                 </div>
+                                {% endfor %}
                             </div>
-                            {% endfor %}
                         </div>
+
                     </div>
+                    <div class="col-sm" style=" padding: 0;">
+                        <div class="swiper h-94 swiper_with_gallery">
+                            <div class="swiper-wrapper">
+                                {% for media in product.media %}
+                                <div class="swiper-slide">
+
+                                    {% render 'product-media', media: media %}
+
+                                </div>
+                                {% endfor %}
+                            </div>
+
+                            <div class="arrows">
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
-
-
             </div>
         </div>
 
@@ -418,11 +435,13 @@
 
 
     var thumbs = new Swiper('.gallery-thumbs', {
+        direction: 'vertical',
         slidesPerView: 'auto',
         spaceBetween: 10,
         centeredSlides: true,
         loop: true,
         slideToClickedSlide: true
+
 
     });
 
